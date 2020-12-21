@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cal</title>
+    <h4>3. โปรแกรม เครื่องคิดเลข - cal.html</h4>
+    <script>
+        function sumall() {
+            number1 = document.getElementById('number1');
+            number2 = document.getElementById('number2');
+            sum = document.getElementById('sum');
+            s1 = document.getElementById('s1');
+            if (parseInt(s1.value) == 1) {
+                sum.textContent = parseInt(number1.value) + parseInt(number2.value)
+            }
+            if (parseInt(s1.value) == 2) {
+                sum.textContent = parseInt(number1.value) - parseInt(number2.value)
+            }
+            if (parseInt(s1.value) == 3) {
+                sum.textContent = parseInt(number1.value) * parseInt(number2.value)
+            }
+            if (parseInt(s1.value) == 4) {
+                sum.textContent = parseInt(number1.value) / parseInt(number2.value)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="num1" id="number1"style="width: 50px">
+    <td>
+        <select name="mark" id="s1">
+            <option value="1">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+    </td>
+    <input type="text" placeholder="num2" id="number2"style="width: 50px">
+    <button onclick="sumall()">=</button>
+    <div id="sum"></div>
+    
+</body>
+</html>
