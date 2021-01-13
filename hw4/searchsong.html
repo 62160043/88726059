@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/stylewall.css">
+    <link rel="stylesheet" href="css/imgslide.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>ค้นหาเพลง</title>
+    
+</head>
+<body>
+    <div id="b1">
+
+        <div class="mySlides fade">
+          <img src="img/z1.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/z2.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/z4.png" style="width:100%">
+        </div>
+
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+    <div class="a1">
+        <h2>ค้นหาเพลง [<a href="newsong.html">เพิ่มเพลงใหม่</a>]</h2>
+        <form class="form-inline" onsubmit="return search();" autocomplete="off"></form>
+    <input type="text" class="form-control" placeholder="ชื่อเพลง" id="search"><br><br>
+    <button onclick="search();" class="button button3">Search</button><br><br>
+    </form>
+    <div id="disp"></div>
+    </div>
+      
+<script src="js/slide.js"></script>
+<script src="js/searchsong.js"></script>
+    
+    
+</body>
+</html>

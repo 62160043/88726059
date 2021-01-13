@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/imgslide.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>เพิ่มเพลงใหม่</title>
+ 
+
+</head>
+<body>
+  
+    <div id="b1">
+
+        <div class="mySlides fade">
+          <img src="img/z1.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/z2.png" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/z4.png" style="width:100%">
+        </div>
+
+    </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+    <div class="a1">
+        <h2>Add New Song [<a href="searchsong.html">ค้นหาเพลง</a>]</h2>
+        <form class="form-inline" onsubmit="return addsong();" autocomplete="off"></form>
+        <input type="text" class="form-control" placeholder="ชื่อเพลง" id="addsong"><br>
+        <input type="text" class="form-control" placeholder="ศิลปิน" id="artist"><br>
+        <textarea class="form-control" id="lyrics" placeholder="เนื้อเพลง" cols="30" rows="10"></textarea><br><br>
+        <button onclick="addsong();" class="button button1">Save</button>
+        <button class="button button3" type="reset" value="reset" onclick="Clearform();">Clear Form</button>
+        </form>
+        
+    </div>
+
+<script src="js/slide.js"></script>
+<script src="js/addsong.js"></script>
+    
+    
+</body>
+</html>
