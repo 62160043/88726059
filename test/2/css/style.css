@@ -1,0 +1,23 @@
+#firstname {
+    
+    font-family: 'Athiti', sans-serif;;
+    font-size:12px;
+  }
+h2.Mn {
+    color: #8c79a0;
+    font-family: "Sofia", sans-serif;
+    font-size:30px;
+}
+p.a1 {
+    margin: auto;
+    width: 100%;
+    border: 2px solid rgb(219, 202, 202);
+    background:rgb(236, 233, 238);
+    font-family: "THA0114.ttf";
+    font-size:12px;
+}
+
+ html { 
+    background: url(BG2.jpg) no-repeat center fixed; 
+    background-size: cover;
+}

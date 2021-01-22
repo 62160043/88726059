@@ -1,0 +1,91 @@
+#firstname {
+    
+    font-family: 'Chonburi', cursive;
+    font-size:12px;
+  }
+
+p {
+    color: #1751f1;
+    font-family: 'Sriracha', cursive;
+    }
+
+html { 
+        background: url(66.jpg) no-repeat center fixed; 
+        background-size: cover;
+    }
+a[href*="FROFILE"]{
+    background-color: green;
+}
+h1 {
+  text-shadow: 2px 2px;
+    font-family: 'Chonburi', cursive;
+  }
+div.ex1 {
+    width: 300px;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  } 
+  div.ex2 {
+    width: 300px;
+    border-radius: 25px;
+    padding: 25px;
+    background-color: rgb(202, 197, 197);
+  }
+  a {
+    color: rgb(184, 29, 124);
+  }
+  .prof{
+      background-color: rgb(236, 205, 146);
+      padding: 20px;
+      width: 30%;
+      margin: 40px;
+  }
+  #col{
+      background-color: rgb(230, 154, 161);
+    }
+
+    img:hover {
+      box-shadow: 0 2px 2px 5px rgba(0, 140, 186, 3);
+    }
+    a:visitednk {
+        background-color: #f44336;
+        color: white;
+        border-radius: 25px;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .button {
+        background-color: #d6761c;
+        border-radius: 25px;
+        border: none;
+        color: rgb(27, 26, 26);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      textarea {
+        width: 30%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+    
+      div.ex2 {
+        width: 300px;
+        padding: 25px;
+        box-sizing: border-box;
+        background-color: lightblue;
+      }
+      
