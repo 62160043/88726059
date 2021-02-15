@@ -3,31 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>88720159</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <style>
-        
-        p {
-            font-size: 12;
-        }
-        p {
-            font-family:"Tahoma";
-        }
-    </style>
+    <title>convert</title>
 </head>
+<script>
+    function change(n){
+        n = document.getElementById('number').value
+        document.getElementById("disp").innerHTML = "";
+        if(n<1000){
+            count = n;
+            document.getElementById("disp").innerHTML += "ธนบัตร 1,000 : "+"";
+        }
+        if(n>=1000){
+            bn1000 = Math.floor(n/1000);
+            count = (n-(1000*bn1000));
+            document.getElementById("disp").innerHTML += "ธนบัตร 1,000 : "+bn1000+" ใบ";
+        }
+        if(n<500){
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 500 : ";
+        }
+        if(n>=500){
+            bn500 = Math.floor(count/500);
+            count = (count-(500*bn500));
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 500 : "+bn500+" ใบ";
+        }
+        if(n<100){
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 100 : ";
+        }
+        if(n>=100){
+            bn100 = Math.floor(count/100);
+            count = (count-(100*bn100));
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 100 : "+bn100+" ใบ";
+        }
+        if(n<50){
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 50 : ";
+        }
+        if(n>=50){
+            bn50 = Math.floor(count/50);
+            count = (count-(50*bn50));
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 50 : "+bn50+" ใบ";
+        }
+        if(n<20){
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 20 : ";
+        }
+        if(n>=20){
+            bn20 = Math.floor(count/20);
+            count = (count-(20*bn20));
+            document.getElementById("disp").innerHTML += "<br>"+"ธนบัตร 20 : "+bn20+" ใบ";
+        }
+        if(n<10){
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 10 : ";
+        }
+        if(n>=10){
+            coin10 = Math.floor(count/10);
+            count = (count-(10*coin10));
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 10 : "+coin10+" เหรียญ";
+        }
+        if(n<5){
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 5 : ";
+        }
+        if(n>=5){
+            coin5 = Math.floor(count/5);
+            count = (count-(5*coin5));
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 5 : "+coin5+" เหรียญ";
+        }
+        if(n<2){
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 2 : ";
+        }
+        if(n>=2){
+            coin2 = Math.floor(count/2);
+            count = (count-(2*coin2));
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 2 : "+coin2+" เหรียญ";
+        }
+        if(n<1){
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 1 : ";
+        }
+        if(n>=1){
+            coin1 = Math.floor(count/1);
+            count = (count-(1*coin1));
+            document.getElementById("disp").innerHTML += "<br>"+"เหรียญ 1 : "+coin1+" เหรียญ";
+        }
+        
+    }
+</script>
 <body>
-    <p>&nbsp;88720159	&nbsp;Information System Maintenance</p>
-    <p>&nbsp;คำอธิบายรายวิชา</p>
-    <p>&nbsp;Assemble and install computer components and peripherals, install different
-        operating systems and necessary utility applications, troubleshoot personal computer and network problems, 
-        recover lost data. Virus &nbsp;removal. Basic data backup and storage, soft skills for Helpdesk</p>
-    <p>&nbsp;ผู้สอน: ดร.เสฏฐนันท์ ทองสุวรรณ์</p>
-    &nbsp;<a class="btn btn-primary" href="PROFILE.html" role="button">Back</a>
-    
-    
+    <input type="text" id="number">
+    <button onclick="change(this.value);" id="je">Convert</button>
+    <div id="disp"></div>
+
 </body>
 </html>

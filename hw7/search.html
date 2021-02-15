@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+
+
+<center><h1>ค้นหาเพลง</h1>
+<input type="text" id="kw">
+<button onclick="search()"class="btn btn-lg btn-success">ค้นหา</button>
+<h5><div id="disp"></div><h5></center>
+    <h3><center><form method="post" action="search_post.php">
+        <input type="submit" class="btn btn-danger" value="Adv Search">
+</form></center></h3>
+
+    <script>
+        function search() {
+            kw = document.getElementById('kw').value;
+            var typ = "";
+            console.log("kw=" + kw);
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // document.getElementById('disp').innerHTML = this.responseText;
+                    arr = JSON.parse(this.responseText);
+                    console.log(arr);
+                    if (arr.length == 0) {
+                        document.getElementById('disp').innerHTML = "Not found";
+                    } else {
+                        html = "";
+                        for (i = 0; i < arr.length; i++) {
+                            html += arr[i].MusicName + ", " + arr[i].AlbumName + ", " + arr[i].Lyrics +"<br>";
+                        }
+                        document.getElementById('disp').innerHTML = html;
+                    }
+                }
+            }
+            parameters = "kw=" + kw + "&typ=" + typ;
+            xmlhttp.open("post", "search.php");
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send(parameters);
+        }
+    </script>
+
+
+
+
+
+
+<!-- <form method="post" action="search.php">
+    <input type="text" name="kw" id="kw">
+    <input type="submit" value="Search">
+</form> -->
+
+
+
+
+
+
+<!-- <form method="post" action="search.php">
+    <input type="text" name="kw" id="kw">
+    <input type="submit" value="Search">
+</form> -->
